@@ -8,6 +8,7 @@ module SlackGoogleBot
         result = ::Google::Search::Web.new(query).first
         message = result ? result.title + "\n" + result.uri : "Didn't find anything. Might have to ask human Seth."
         send_message client, data.channel, message
+
       end
     end
   end
